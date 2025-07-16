@@ -83,7 +83,7 @@ ul
 
 .navbar ul li a:active
 {
-    opacity: 0,2;
+    opacity: 0.2;
 }
 
 .navbar ul li a:hover
@@ -194,6 +194,7 @@ ul
 
 .hero h1
 {
+    margin-bottom: 40px ;
     
 }
 
@@ -247,8 +248,8 @@ ul
     display: flex;
     padding: 10px 20px;
     padding-top: 30px;
-    
     align-items: center;
+    
 }
 
 .skills p
@@ -269,7 +270,6 @@ ul
   75%  { transform: rotate(2deg); }
   100% { transform: rotate(0deg); }
 }
-
 
 
 .skills p:hover
@@ -370,16 +370,32 @@ ul
 
 }
 
-.projects .project-card
-{
+
+.projects .project-card {
+    position: relative;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background-color: whitesmoke;
+    width: 250px;
+    height: 300px;
     border-radius: 20px;
+    overflow: hidden;
+    background-color: whitesmoke; /* fallback if no image */
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Images/istockphoto-867290890-612x612.jpg');
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+
 }
+
+.projects .project-card:nth-child(1) {
+    background-image: url('../Images/ScreenshotAPP.png');
+    background-repeat: no-repeat;
+    background-position: 0% 70%; /* X Y */
+}
+
 
 .projects .project-card:hover
 {
@@ -387,9 +403,13 @@ ul
         cursor: pointer;
 }
 
-.projects .project-card p
-{
-    padding-bottom: 20px;
+.projects p {
+    background: rgba(0, 0, 0, 0.6); /* dark overlay behind text */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
 }
 
 
