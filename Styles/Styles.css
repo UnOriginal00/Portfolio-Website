@@ -547,13 +547,14 @@ ul
     .container
     {
         max-width: 375px;
-        margin: 0 auto;
     }
 
     .hero
     {
-        
+        background-color: #CB429F;
     }
+
+
 
 }
 
